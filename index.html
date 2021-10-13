@@ -9,48 +9,277 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- подключаем шрифты -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="navbar">
+    <header class="header">
       <div class="container">
-        <div class="navbar-top">
-          <a href="#" class="logo"><img class="logo__image" src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" /></a>
-          <a href="#" class="user navbar__user">
-            <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar" />
-            <span class="user__name">Nathan</span>
-          </a>
-          <!-- /.user -->
-          <button class="menu-button navbar-top__menu-button">
+        <div class="header-menu">
+          <a href="#" class="logo"><img class="logo__image" src="img/logo.svg" alt="Logo: ehya" /></a>
+          <nav class="header-nav">
+            <a href="#" class="header-nav__link">Бестселлеры</a>
+            <a href="#" class="header-nav__link">Подборки</a>
+            <a href="#" class="header-nav__link">Авторы</a>
+          </nav>
+          <button class="button header-menu__button">Получить</button>
+          <button class="menu-button header-menu__menu-button">
             <span class="menu-button__line"></span>
             <span class="menu-button__line"></span>
             <span class="menu-button__line"></span>
           </button>
         </div>
-        <!-- /. navbar top -->
+        <!-- /.navbar-top -->
       </div>
       <!-- /.container -->
-      <div class="navbar-bottom">
-        <div class="container">
-          <ul class="navbar-menu">
-            <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">All Deals</a></li>
-            <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotels</a></li>
-            <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Activites</a></li>
-            <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotel Day Packages</a></li>
-            <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Rastaraunts</a></li>
-            <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Events</a></li>
-            <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Rodrigues</a></li>
-          </ul>
-          <!-- /.navbar-menu -->
-        </div>
-        <!-- /.container -->
-      </div>
-      <!-- /.navbar-bottom -->
     </header>
+    <section class="book">
+      <div class="container book-container">
+        <div class="book-text">          
+            <h1 class="book-title">
+              <span style="color: #faad13">Design Theory:</span></br>
+              <span style="color: #183b56">The Psychology of Graphic Design Pricing</span>
+            </h1>
+            <!-- /.book-title -->
+            <span class="book-author">
+              КНИГА МИШЕЛЯ ЯНГА
+            </span>
+            <span class="book-author__text">Спустя 15 лет я управляю собственной студией, выполнив тысячи проектов для крупных клиентов. Теперь я делюсь своими золотыми стратегиями ценообразования на творческую работу.</span>
+            <div class="book-button">
+              <button class="book-button__buy button">
+               купить сейчас
+              </button>
+               <button class="book-button__read button">
+              читать демо
+              </button>              
+            </div>
+            <!-- /.book-button -->           
+        </div>
+        <!-- /.book-text -->
+        <div class="book-image">
+          <img class="image" src="img/main-book.jpg" alt="Книга" />
+        </div>
+        <!-- /.book-image -->
+      </div>
+      <!-- /.container book-container -->
+    </section>
+    <!-- /.book -->
+    <section class="offer">
+      <div class="container offer-container">
+        <div class="recommendations">
+          <h2 class="offer-title">Рекомендации</h2>
+          <div class="recommendations-wrap">
+            <div class="recommendations-card">
+              <img src="img/card1.jpg" alt="" class="recommendations-card__image" />             
+              <div class="recommendations-card__text">
+                <h3 class="recommendations-card__title">The World of Abstract Art</h3>
+                <span class="recommendations-card__theme">Art & Design</span>
+                <span class="recommendations-card__price">$25.00</span>
+                <div class="recommendations-card__buttons">
+                  <button class="button recommendations-card__button">Купить</button>
+                  <button class="button recommendations-card__favourites"><img src="img/favourites.svg" alt=""></button>                   
+                </div>
+                <!-- /.recommendations-card__buttons -->
+             
+              </div>
+              <!-- /.recommendations-card__text -->
+            </div>  
+              <!--/.recommendations-card1  -->         
+           <div class="recommendations-card">
+              <img src="img/card2.jpg" alt="" class="recommendations-card__image" />             
+              <div class="recommendations-card__text">
+                <h3 class="recommendations-card__title">Educated : a&nbsp;Memoir</h3>
+                <span class="recommendations-card__theme">Education</span>
+                <span class="recommendations-card__price">$28.00</span> 
+                <div class="recommendations-card__buttons">
+                  <button class="button recommendations-card__button">Купить</button>
+                  <button class="button recommendations-card__favourites"><img src="img/favourites.svg" alt=""></button>                   
+                </div>              
+              </div>
+              <!-- /.recommendations-card__text -->
+            </div>  
+              <!--/.recommendations-card2  -->
+           <div class="recommendations-card">
+              <img src="img/card3.jpg" alt="" class="recommendations-card__image" />             
+              <div class="recommendations-card__text">
+                <h3 class="recommendations-card__title">The Blue Flowers Ray…</h3>
+                <span class="recommendations-card__theme">Novel</span>
+                <span class="recommendations-card__price">$19.50</span> 
+                <div class="recommendations-card__buttons">
+                  <button class="button recommendations-card__button">Купить</button>
+                  <button class="button recommendations-card__favourites"><img src="img/favourites.svg" alt=""></button>                   
+                </div>               
+              </div>
+              <!-- /.recommendations-card__text -->
+            </div>  
+              <!--/.recommendations-card3  -->
+           <div class="recommendations-card">
+              <img src="img/card4.jpg" alt="" class="recommendations-card__image" />             
+              <div class="recommendations-card__text">
+                <h3 class="recommendations-card__title">There There : a&nbsp;Novel by TO</h3>
+                <span class="recommendations-card__theme">Novel</span>
+                <span class="recommendations-card__price">$20.00</span> 
+                <div class="recommendations-card__buttons">
+                  <button class="button recommendations-card__button">Купить</button>
+                  <button class="button recommendations-card__favourites"><img src="img/favourites.svg" alt=""></button>                   
+                </div>               
+              </div>
+              <!-- /.recommendations-card__text -->
+            </div>  
+              <!--/.recommendations-card4  -->
+           <div class="recommendations-card">
+              <img src="img/card5.jpg" alt="" class="recommendations-card__image" />             
+              <div class="recommendations-card__text">
+                <h3 class="recommendations-card__title">WMNDFL : The&nbsp;Inspiration</h3>
+                <span class="recommendations-card__theme">Business</span>
+                <span class="recommendations-card__price">$23.00</span> 
+                <div class="recommendations-card__buttons">
+                  <button class="button recommendations-card__button">Купить</button>
+                  <button class="button recommendations-card__favourites"><img src="img/favourites.svg" alt=""></button>                   
+                </div>             
+              </div>
+              <!-- /.recommendations-card__text -->
+            </div>  
+              <!--/.recommendations-card5  -->
+           <div class="recommendations-card">
+              <img src="img/card6.jpg" alt="" class="recommendations-card__image" />             
+              <div class="recommendations-card__text">
+                <h3 class="recommendations-card__title">Making Things&nbsp;Happen</h3>
+                <span class="recommendations-card__theme">Motivation</span>
+                <span class="recommendations-card__price">$23.00</span> 
+                <div class="recommendations-card__buttons">
+                  <button class="button recommendations-card__button">Купить</button>
+                  <button class="button recommendations-card__favourites"><img src="img/favourites.svg" alt=""></button>                   
+                </div>               
+              </div>
+              <!-- /.recommendations-card__text -->
+            </div>  
+              <!--/.recommendations-card6  -->                                          
+          </div>
+          <!-- /.recommendations-wrap -->
+          <button class="button recommendations-button">БОЛЬШЕ РЕКОМЕНДАЦИЙ</button>
+          </div>
+         <!--/.recommendations  -->
+         <div class="bestsellers">
+          <h2 class="offer-title">Топ месяца</h2>
+          <div class="bestsellers-wrap">
+           <div class="bestsellers-card">
+              <img src="img/card-top1.jpg" alt="" class="bestsellers-card__image" />             
+              <div class="bestsellers-card__text">
+                <h3 class="bestsellers-card__title">Sprint : Solve, Test in 5 Days</h3>
+                <span class="bestsellers-card__price">$23.00</span> 
+                <div class="bestsellers-card__buttons">
+                  <button class="button bestsellers-card__button">Купить</button>
+                </div>               
+              </div>
+              <!-- /.recommendations-card__text -->
+            </div> 
+            <!--/.bestsellers-card1  -->
+           <div class="bestsellers-card">
+              <img src="img/card-top2.jpg" alt="" class="bestsellers-card__image" />             
+              <div class="bestsellers-card__text">
+                <h3 class="bestsellers-card__title">Hacking Growth Break Problem</h3>
+                <span class="bestsellers-card__price">$23.00</span> 
+                <div class="bestsellers-card__buttons">
+                  <button class="button bestsellers-card__button">Купить</button>
+                </div>               
+              </div>
+              <!-- /.recommendations-card__text -->
+            </div> 
+            <!--/.bestsellers-card2  -->
+           <div class="bestsellers-card">
+              <img src="img/card-top3.jpg" alt="" class="bestsellers-card__image" />             
+              <div class="bestsellers-card__text">
+                <h3 class="bestsellers-card__title">Very Nice a Novel by Mercy</h3>
+                <span class="bestsellers-card__price">$23.00</span> 
+                <div class="bestsellers-card__buttons">
+                  <button class="button bestsellers-card__button">Купить</button>
+                </div>               
+              </div>
+              <!-- /.recommendations-card__text -->
+            </div> 
+            <!--/.bestsellers-card3  -->
+           <div class="bestsellers-card">
+              <img src="img/card-top4.jpg" alt="" class="bestsellers-card__image" />             
+              <div class="bestsellers-card__text">
+                <h3 class="bestsellers-card__title">Hooked : How to Build Products</h3>
+                <span class="bestsellers-card__price">$23.00</span> 
+                <div class="bestsellers-card__buttons">
+                  <button class="button bestsellers-card__button">Купить</button>
+                </div>               
+              </div>
+              <!-- /.recommendations-card__text -->
+            </div> 
+            <!--/.bestsellers-card4  -->
+            <hr class="bestsellers__line">
+            <button class="button bestsellers-button">Лучшие книги</button>
+           </div>
+           <!-- /.bestsellers-wrap -->
+          </div>
+      <!-- /.bestsellers -->
+      </div>
+    </section>
+    <div class="container ">
+        <hr class="separate">
+    </div>
+  
+    <section class="categories">
+      <div class="container categories-container">
+        <div class="swiper categories-slider">
+           <div class="swiper-wrapper">
+             <div class="swiper-slide">
+              <div class="reviews-slider__item">
+                <p class="reviews-slider__text">
+                  It was very 
+                </p>
+                <!-- /.review-slider__profile -->
+              </div>
+              <!-- /.review-slider__item -->
+            </div>
+            <!-- ./swiper-slide -->
+             <div class="swiper-slide">
+              <div class="reviews-slider__item">
+                <p class="reviews-slider__text">
+                  It was very nice
+                </p>
+                <!-- /.review-slider__profile -->
+              </div>
+              <!-- /.review-slider__item -->
+            </div>
+            <!-- ./swiper-slide -->
+             <div class="swiper-slide">
+              <div class="reviews-slider__item">
+                <p class="reviews-slider__text">
+                  It was very 
+                </p>
+                <!-- /.review-slider__profile -->
+              </div>
+              <!-- /.review-slider__item -->
+            </div>
+            <!-- ./swiper-slide -->
+             <div class="swiper-slide">
+              <div class="reviews-slider__item">
+                <p class="reviews-slider__text">
+                  It was very nice 
+                </p>
+                <!-- /.review-slider__profile -->
+              </div>
+              <!-- /.review-slider__item -->
+            </div>
+            <!-- ./swiper-slide -->
+           </div>
+           <!-- /.swiper-wrappe -->
+        </div>       
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.slider -->
+    <div class="test"></div>
+
+    <div class="test"></div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
