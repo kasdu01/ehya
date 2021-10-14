@@ -1,2 +1,37 @@
 .categories-container
   margin-top: 60px
+  margin-bottom: 100px
+.categories-slider
+  position: relative
+
+.swiper-slide__image
+  text-align: center
+  border: 1px solid #ECEEF2
+  border-radius: 8px
+  // transform: matrix(1, 0, 0, -1, 0, 0)
+
+.categories-slider__button
+  width: 56px
+  height: 56px
+  background-color: #fff
+  // background: #FFFFFF
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.08)
+  border-radius: 2000px
+  border: none
+  background-size: 18px
+  background-position: center
+  background-repeat: no-repeat
+
+.categories-slider__button--prev
+  background-image: url(../img/button-prev.svg)
+  left: 0
+  transform: translateX(-50%)
+.categories-slider__button--prev::after
+  content: ''
+
+.categories-slider__button--next
+  background-image: url(../img/button-next.svg)
+  right: 0
+  transform: translateX(50%)
+.categories-slider__button--next::after
+  content: ''

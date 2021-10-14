@@ -1,27 +1,11 @@
-const hotelSwiper = new Swiper('.hotel-slider', {
+const categoriesSlider = new Swiper('.categories__swiper', {
   // Optional parameters
-  loop: true,
+  loop: false,
 
   // Navigation arrows
   navigation: {
-    nextEl: '.hotel-slider__button--next',
-    prevEl: '.hotel-slider__button--prev',
-  },
-   keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-    pageUpDown: true,
-  },
-});
-
-const reviewsSlider = new Swiper('.reviews-slider', {
-  // Optional parameters
-  loop: true,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.reviews-slider__button--next',
-    prevEl: '.reviews-slider__button--prev',
+    nextEl: '.categories-slider__button--next',
+    prevEl: '.categories-slider__button--prev',
   },
    keyboard: {
     enabled: true,
@@ -29,7 +13,24 @@ const reviewsSlider = new Swiper('.reviews-slider', {
     pageUpDown: true,
   },
    autoHeight: true,
-  });
-  
+   slidesPerView: 4,
+   spaceBetween: 27,
+});
+const unreleasedSlider = new Swiper('.unreleased__swiper', {
+  // Optional parameters
+  loop: false,
 
-$('.parallax-window').parallax({imageSrc: '/img/newsletter-bg.jpg'});
+  // Navigation arrows
+  navigation: {
+    nextEl: '.unreleased-slider__button--next',
+    prevEl: '.unreleased-slider__button--prev',
+  },
+   keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+    pageUpDown: true,
+  },
+   autoHeight: true,
+   slidesPerView: 5,
+   spaceBetween: 30,
+});
