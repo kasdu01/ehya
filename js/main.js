@@ -114,7 +114,7 @@
       },
       email: {
         required: "Пожалуйста, введите e-mail",
-        email: "Адрес должен быть типа: name@domain.com"
+        email: "Адрес должен быть вида: name@domain.com"
       },
       modalEmail: {
         required: "Пожалуйста, введите e-mail",
@@ -124,15 +124,15 @@
   });    
   });
 
-  // $(".newsletter-subscribe").validate({
-  //   errorClass: "invalid",
-  //   messages: {
-  //     email: {
-  //       required: "We need your email address to contact you",
-  //       email: "Your email address must be in the format of name@domain.com"
-  //     },
-  //   },
-  // });    
+  $(".newsletter-subscribe").validate({
+    errorClass: "invalid",
+    messages: {
+      email: {
+        required: "Пожалуйста, введите e-mail",
+        email: "Адрес должен быть вида: name@domain.com"
+      },
+    },
+  });    
   
 
   $(document).ready(function(){
