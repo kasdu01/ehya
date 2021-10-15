@@ -901,7 +901,11 @@ template {
   content: "";
 }
 
-.a21 {
+.swiper-button-prev.swiper-button-disabled.categories-slider__button {
+  opacity: 0;
+}
+
+.swiper-button-next.swiper-button-disabled.categories-slider__button {
   opacity: 0;
 }
 
