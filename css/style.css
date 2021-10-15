@@ -20,6 +20,103 @@ img {
   cursor: pointer;
 }
 
+.input {
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 0 23px 0 23px;
+  height: 50px;
+  outline: none;
+}
+
+.message {
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 18px 23px;
+}
+
+.btn {
+  cursor: pointer;
+  opacity: 1;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.invalid {
+  color: #EC1F46;
+  border-bottom: 1px solid #EC1F46;
+  z-index: 102;
+}
+
+.vertical-logo {
+  display: inline;
+}
+
+#phone-error {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  padding: 5px;
+  color: #fff;
+  background-color: #EC1F46;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#name-error {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  padding: 5px;
+  color: #fff;
+  background-color: #EC1F46;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#modalEmail-error {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  padding: 5px;
+  color: #fff;
+  background-color: #EC1F46;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#email-error {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  max-width: 300px;
+  padding: 5px;
+  color: #fff;
+  background-color: #f35371;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+a {
+  opacity: 1;
+}
+a:hover {
+  opacity: 0.6;
+}
+
+textarea {
+  resize: none;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -606,6 +703,10 @@ template {
   margin: 0;
 }
 
+.favouritesRed {
+  fill: red;
+}
+
 .recommendations-button {
   color: #1565D8;
   background-color: rgba(21, 101, 216, 0.1);
@@ -800,6 +901,10 @@ template {
   content: "";
 }
 
+.a21 {
+  opacity: 0;
+}
+
 .unreleased {
   background-color: #183B56;
 }
@@ -965,4 +1070,111 @@ template {
   background-image: url(../img/playbutton_white.svg);
   background-repeat: no-repeat;
   background-size: 30px;
+}
+
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(179, 186, 197, 0.7);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.modal__overlay--visible {
+  visibility: visible;
+  opacity: 1;
+}
+.modal__dialog {
+  width: 95%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 478px;
+  padding: 33px 88px;
+  background-color: #183B56;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  border-radius: 8px;
+  z-index: 101;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.modal__dialog--visible {
+  visibility: visible;
+  opacity: 1;
+}
+.modal__close {
+  position: absolute;
+  right: 18px;
+  top: 17px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal__input {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 0 23px 0 23px;
+  height: 50px;
+  font-size: 16px;
+}
+.modal__input-group {
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 15px;
+}
+.modal__message {
+  width: 100%;
+  min-height: 123px;
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 15px;
+}
+.modal__button {
+  margin-top: 15px;
+  padding: 20px;
+  background-color: #1565D8;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.modal__info {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #E0E0E0;
+}
+.modal__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.input {
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 0 23px 0 23px;
+  height: 50px;
+  outline: none;
 }/*# sourceMappingURL=style.css.map */
