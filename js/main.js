@@ -38,17 +38,23 @@
   });
 
 
-  // Замена цвета сердечек при клике
-  var favourites = document.querySelector(".favourites");  
-  favourites.addEventListener("click", function () {
-    console.log("click");
-    document
-      .querySelector(".favourites")
-      .classList.toggle("favouritesRed");
-  });
+  // Замена цвета первого среди всех сердечка при клике
+  // var favourites = document.querySelector(".favourites");  
+  // favourites.addEventListener("click", function () {
+  //   console.log("click");
+  //   document
+  //     .querySelector(".favourites")
+  //     .classList.toggle("favouritesRed");
+  // });
 
-    
 
+  // Замена цвета всех сердечек при клике
+  var favourites = document.querySelectorAll(".favourites");  
+  favourites.forEach(favourite => {
+    favourite.addEventListener("click", function () {
+      favourite.classList.toggle("favouritesRed");
+    });
+  })
 
 
   
