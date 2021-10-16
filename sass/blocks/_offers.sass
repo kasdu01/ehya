@@ -2,6 +2,7 @@
   display: flex
   justify-content: space-between
   margin-bottom: 79px
+  width: 1147px
 
 .offer-title
   font-family: Roboto Condensed
@@ -13,6 +14,7 @@
   color: $item-color
   margin-top: 0
   margin-bottom: 30px
+  margin-left: -3px
 
 .recommendations-wrap
   display: flex
@@ -31,13 +33,13 @@
   overflow: visible
 
 .recommendations-card__image
-  padding: 11px 9px 11px 11px
+  padding: 8px 5px 9px 4px
 
 .recommendations-card__text
   display: flex
   flex-direction: column
   margin: 0
-  padding: 24px 16px 26px 9px
+  padding: 21px 2px 25px 15px
   width: 50%
   justify-content: space-between
 
@@ -58,6 +60,7 @@
   font-size: 16px
   line-height: 22px
   color: $item-color
+  height: 35px
 
 .recommendations-card__price
   font-family: Roboto Condensed
@@ -67,6 +70,7 @@
   line-height: 24px
   letter-spacing: 0.2px
   color: $button
+  height: 35px
 
 .recommendations-card__buttons
   display: flex
@@ -115,7 +119,7 @@
   line-height: 20px
   text-align: center
   letter-spacing: 0.2px
-  margin-top: 27px
+  margin-top: 24px
 
 .bestsellers
   display: flex
@@ -131,9 +135,12 @@
 .bestsellers-card
   height: 178px
   display: flex
-  margin-bottom: 35px
   padding-left: 24px
   padding-right: 24px
+  &:nth-last-child(n+4)
+    margin-bottom: 35px
+  &:nth-child(4)
+    margin-bottom: 27px
 
 .bestsellers-card__image
   margin-right: 26px
@@ -147,6 +154,8 @@
   // padding: 24px 16px 26px 9px
   // width: 50%
   justify-content: space-between
+  padding-top: 9px
+  padding-bottom: 9px
 
 .bestsellers-card__title
   font-family: Roboto
@@ -174,6 +183,7 @@
   line-height: 24px
   letter-spacing: 0.2px
   color: $button
+  height: 30px
 
 .bestsellers-card__buttons
   display: flex

@@ -21,11 +21,11 @@
         <div class="header-menu">
           <a href="#" class="logo"><img class="logo__image" src="img/logo.svg" alt="Logo: ehya" /></a>
           <nav class="header-nav">
-            <a href="#" class="header-nav__link">Бестселлеры</a>
-            <a href="#" class="header-nav__link">Подборки</a>
-            <a href="#" class="header-nav__link">Авторы</a>
+            <a href="#" class="header-nav__link">Рекомендации</a>
+            <a href="#" class="header-nav__link">Книги</a>
+            <a href="#" class="header-nav__link">Блог</a>
           </nav>
-          <button data-toggle="modal" class="button header-menu__button">Получить</button>
+          <button data-toggle="modal" class="button header-menu__button"><a class="lnk" href="#">Получить</a></button>
           <button class="menu-button header-menu__menu-button">
             <span class="menu-button__line"></span>
             <span class="menu-button__line"></span>
@@ -52,8 +52,7 @@
               <button data-toggle="modal" class="book-button__buy button">
                купить сейчас
               </button>
-               <button class="book-button__read button">
-              читать демо
+               <button class="book-button__read button"><a class="lnk" href="#">читать демо</a>
               </button>              
             </div>
             <!-- /.book-button -->           
@@ -185,11 +184,11 @@
               <!--/.recommendations-card6  -->                                          
           </div>
           <!-- /.recommendations-wrap -->
-          <button class="button recommendations-button">БОЛЬШЕ РЕКОМЕНДАЦИЙ</button>
+          <button class="button recommendations-button"><a class="lnk" href="#">БОЛЬШЕ РЕКОМЕНДАЦИЙ</a></button>
           </div>
          <!--/.recommendations  -->
          <div class="bestsellers">
-          <h2 class="offer-title">Топ месяца</h2>
+          <h2 class="offer-title">Топ Месяца</h2>
           <div class="bestsellers-wrap">
            <div class="bestsellers-card">
               <img src="img/card-top1.jpg" alt="" class="bestsellers-card__image" />             
@@ -240,7 +239,7 @@
             </div> 
             <!--/.bestsellers-card4  -->
             <hr class="bestsellers__line">
-            <button class="button bestsellers-button">Лучшие книги</button>
+            <button class="button bestsellers-button"><a class="lnk" href="#">Лучшие книги</a></button>
            </div>
            <!-- /.bestsellers-wrap -->
           </div>
@@ -393,18 +392,39 @@
           </div>
           <!-- /.history-video1 -->
           <div class="history-video2">
-            <img src="img/video2.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY">
+            <img class="history-video2__image"src="img/video2.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY">
             <button class="button history-video2__button"></button>
+            <div class="history__info">
+              <div class="history-video__description">
+                <h2 class="history-video__name">Emelda Scandroot</h2>
+                <span class="history-video__author">Author of Books Tittle</span>
+              </div>
+              <img src="img/bookmark.svg" alt="" class="history__bookmark">
+            </div>
           </div>
           <!-- /.history-video2 -->
           <div class="history-video2">
-            <img src="img/video3.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY">
+            <img class="history-video2__image" src="img/video3.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY">
             <button class="button history-video2__button"></button>
+            <div class="history__info">
+              <div class="history-video__description">
+                <h2 class="history-video__name">Mar Reuda</h2>
+                <span class="history-video__author">Author of Books Tittle</span>
+              </div>
+              <img src="img/bookmark.svg" alt="" class="history__bookmark">
+            </div>            
           </div>
           <!-- /.history-video3 -->
           <div class="history-video2">
-            <img src="img/video4.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY">
+            <img class="history-video2__image" src="img/video4.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY">
             <button class="button history-video2__button"></button>
+            <div class="history__info">
+              <div class="history-video__description">
+                <h2 class="history-video__name">Nembo Lukeni</h2>
+                <span class="history-video__author">Author of Books Tittle</span>
+              </div>
+              <img src="img/bookmark.svg" alt="" class="history__bookmark">
+            </div>            
           </div>
           <!-- /.history-video4 -->
         </div>
@@ -465,7 +485,7 @@
       <div class="container blog-container">
         <div class="blog-header">
           <h2 class="blog__title">Ehya Блог</h2>
-          <button class="button blog-button__all">Все блоги</button>
+          <button class="button blog-button__all"><a class="lnk" href="#">Все блоги</a></button>
         </div>
         <div class="blog-grid">
           <div class="blog-story">
@@ -482,15 +502,15 @@
               <div class="blog-article__info">
                 <span class="blog__date">23 МАРТА 2020</span>
                 <p class="blog-article__text">29 Motivational Quotes for Work Environments</p>
-                <botton class="blog-button__read">ЧИТАТЬ</botton>
+                <botton class="blog-button__read"><a class="lnk" href="#">ЧИТАТЬ</a></botton>
               </div>
             </div>
             <div class="blog-article__card">
               <img class="blog-article__image" src="img/blog3.png" alt="blog image">
               <div class="blog-article__info">
                 <span class="blog__date">28 МАРТА 2020</span>
-                <p class="blog-article__text">Learn To Love Growth and You Will Be A Success</p>
-                <botton class="blog-button__read">ЧИТАТЬ</botton>
+                <p class="blog-article__text">Learn To Love Growth and&nbsp;You Will Be A Success</p>
+                <botton class="blog-button__read"><a class="lnk" href="#">ЧИТАТЬ</a></botton>
               </div>
             </div>
             <div class="blog-article__card">
@@ -498,7 +518,7 @@
               <div class="blog-article__info">
                 <span class="blog__date">28 МАРТА 2020</span>
                 <p class="blog-article__text">Motivation How To Build Trust at your Work</p>
-                <botton class="blog-button__read">ЧИТАТЬ</botton>
+                <botton class="blog-button__read"><a class="lnk" href="#">ЧИТАТЬ</a></botton>
               </div>
             </div>
           </div>
@@ -531,61 +551,65 @@
     <!-- /.subscribe -->
     <section class="footer">
       <div class="container footer-container">
+        <div class="footer-top">
         <div class="footer-info">
-        <div class="footer-link">
-          <img src="img/Logo.svg" alt="" class="footer-logo">
+          <a href="#"><img src="img/Logo.svg" alt="" class="footer-logo"></a>
           <div class="footer__text">
             <span>Создайте современный и креативный веб-сайт с crealand</span>
           </div>
           <div class="social">
-            <img src="img/social-icon1.svg" alt="Google" class="social__icon">
-            <img src="img/social-icon2.svg" alt="Twitter" class="social__icon">
-            <img src="img/social-icon3.svg" alt="Instagram" class="social__icon">
-            <img src="img/social-icon4.svg" alt="Linkdin" class="social__icon">
+            <a href="google.com"><img src="img/social-icon1.svg" alt="Google" class="social__icon"></a>
+            <a href="Twitter.com"><img src="img/social-icon2.svg" alt="Twitter" class="social__icon"></a>
+            <a href="instagram.com"><img src="img/social-icon3.svg" alt="Instagram" class="social__icon"></a>
+            <a href="Linkdin.com"><img src="img/social-icon4.svg" alt="Linkdin" class="social__icon"></a>
           </div>
         </div>
         <!-- /.footer-info -->
-        <div class="footer-product">
-          <h3 class="footer-title">Продукт</h3>
-          <ul class="footel-list">
-            <li class="list-item">Лэндинг</li>
-            <li class="list-item">Функции</li>
-            <li class="list-item">Документация</li>
-            <li class="list-item">Скидки</li>
-            <li class="list-item">Расценки</li>
-          </ul>
+        <div class="footer-link">
+          <div class="footer-product">
+            <h3 class="footer-title">Продукт</h3>
+            <ul class="footel-list">
+              <a href="#"><li class="list-item">Лэндинг</li></a>
+              <a href="#"><li class="list-item">Функции</li></a>
+              <a href="#"><li class="list-item">Документация</li></a>
+              <a href="#"><li class="list-item">Скидки</li></a>
+              <a href="#"><li class="list-item">Расценки</li></a>
+            </ul>
+          </div>
+          <!-- /.footer-product -->
+          <div class="footer-services">
+            <h3 class="footer-title">Сервисы</h3>
+            <ul class="footel-list">
+              <a href="#"><li class="list-item">Документация</li></a>
+              <a href="#"><li class="list-item">Дизайн</li></a>
+              <a href="#"><li class="list-item">Темы</li></a>
+              <a href="#"><li class="list-item">Илюстрации</li></a>
+              <a href="#"><li class="list-item">UI Kit</li></a>
+            </ul>
+          </div>
+          <!-- /.footer-services -->       
+          <div class="footer-company">
+            <h3 class="footer-title">Компания</h3>
+            <ul class="footel-list">
+              <a href="#"><li class="list-item">О нас</li></a>
+              <a href="#"><li class="list-item">Условия</li></a>
+              <a href="#"><li class="list-item">Privacy Policy</li></a>
+              <a href="#"><li class="list-item">Careers</li></a>
+            </ul>
+          </div> 
+          <!-- /.footer-company -->
+          <div class="footer-more">
+            <h3 class="footer-title">Еще..</h3>
+            <ul class="footel-list">
+              <a href="#"><li class="list-item">Документация</li></a>
+              <a href="#"><li class="list-item">Лицензия</li></a>
+              <a href="#"><li class="list-item">Изменения</li></a>
+            </ul>
+          </div> 
+          <!-- /.footer-more -->  
         </div>
-        <!-- /.footer-product -->
-        <div class="footer-services">
-          <h3 class="footer-title">Сервисы</h3>
-          <ul class="footel-list">
-            <li class="list-item">Документация</li>
-            <li class="list-item">Дизайн</li>
-            <li class="list-item">Темы</li>
-            <li class="list-item">Илюстрации</li>
-            <li class="list-item">UI Kit</li>
-          </ul>
-        </div>
-        <!-- /.footer-services -->       
-        <div class="footer-company">
-          <h3 class="footer-title">Компания</h3>
-          <ul class="footel-list">
-            <li class="list-item">О нас</li>
-            <li class="list-item">Условия</li>
-            <li class="list-item">Privacy Policy</li>
-            <li class="list-item">Careers</li>
-          </ul>
-        </div> 
-        <!-- /.footer-company -->
-        <div class="footer-more">
-          <h3 class="footer-title">Еще..</h3>
-          <ul class="footel-list">
-            <li class="list-item">Документация</li>
-            <li class="list-item">Лицензия</li>
-            <li class="list-item">Изменения</li>
-          </ul>
-        </div> 
-        <!-- /.footer-more -->          
+        <!-- /.footer-link -->
+        
         </div>
         <!-- /.footer-info -->
       <div class="copyright">

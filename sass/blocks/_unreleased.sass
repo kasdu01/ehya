@@ -49,10 +49,11 @@
   background-repeat: no-repeat
 
 .unreleased-slider__button--prev
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 1.5))
   position: absolute
   // left: calc(100% - 105px)
   left: auto
-  right: 84px
+  right: 50px
   background-image: url(../img/button-prev-light.svg)
   transform: translateX(-50%)
 
@@ -60,6 +61,7 @@
   content: ''
 
 .unreleased-slider__button--next
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 1.5))
   position: absolute
   right: 0
   background-image: url(../img/button-next-light.svg)

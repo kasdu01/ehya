@@ -107,6 +107,7 @@ img {
 }
 
 a {
+  text-decoration: none;
   opacity: 1;
 }
 a:hover {
@@ -121,6 +122,10 @@ textarea {
   background-color: red;
   width: 100%;
   height: 20px;
+}
+
+.lnk {
+  color: #1565D8;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -466,7 +471,6 @@ template {
   width: 100%;
   padding: 36px 0;
   margin: 0;
-  margin-top: 11px;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -489,14 +493,14 @@ template {
   text-decoration: none;
 }
 .header-nav__link:nth-last-child(n+2) {
-  margin-right: 25px;
+  margin-right: 20px;
 }
 
 .header-menu__button {
   color: #1565D8;
   border: 2px solid #1565D8;
   background-color: #fff;
-  padding: 13px 27px;
+  padding: 13px 34px;
   border-radius: 8px;
   font-weight: bold;
   font-size: 16px;
@@ -505,14 +509,14 @@ template {
 
 .header-nav {
   margin-left: auto;
-  margin-right: 37px;
+  margin-right: 61px;
 }
 
 .book-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 69px;
-  margin-bottom: 50px;
+  margin-top: 57px;
+  margin-bottom: 100px;
 }
 
 .book-text {
@@ -559,7 +563,7 @@ template {
   line-height: 32px;
   display: block;
   letter-spacing: 0px;
-  margin-bottom: 56px;
+  margin-bottom: 55px;
 }
 
 .book-button__buy {
@@ -574,11 +578,11 @@ template {
   font-weight: bold;
   font-size: 18px;
   line-height: 25px;
-  margin-right: 26px;
+  margin-right: 22px;
 }
 
 .book-button__read {
-  padding: 16px 50px;
+  padding: 15px 54px;
   background-color: #fff;
   color: #1565D8;
   border: 2px solid #1565D8;
@@ -605,6 +609,7 @@ template {
   display: flex;
   justify-content: space-between;
   margin-bottom: 79px;
+  width: 1147px;
 }
 
 .offer-title {
@@ -617,6 +622,7 @@ template {
   color: #183B56;
   margin-top: 0;
   margin-bottom: 30px;
+  margin-left: -3px;
 }
 
 .recommendations-wrap {
@@ -638,14 +644,14 @@ template {
 }
 
 .recommendations-card__image {
-  padding: 11px 9px 11px 11px;
+  padding: 8px 5px 9px 4px;
 }
 
 .recommendations-card__text {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 24px 16px 26px 9px;
+  padding: 21px 2px 25px 15px;
   width: 50%;
   justify-content: space-between;
 }
@@ -668,6 +674,7 @@ template {
   font-size: 16px;
   line-height: 22px;
   color: #183B56;
+  height: 35px;
 }
 
 .recommendations-card__price {
@@ -678,6 +685,7 @@ template {
   line-height: 24px;
   letter-spacing: 0.2px;
   color: #1565D8;
+  height: 35px;
 }
 
 .recommendations-card__buttons {
@@ -728,7 +736,7 @@ template {
   line-height: 20px;
   text-align: center;
   letter-spacing: 0.2px;
-  margin-top: 27px;
+  margin-top: 24px;
 }
 
 .bestsellers {
@@ -747,9 +755,14 @@ template {
 .bestsellers-card {
   height: 178px;
   display: flex;
-  margin-bottom: 35px;
   padding-left: 24px;
   padding-right: 24px;
+}
+.bestsellers-card:nth-last-child(n+4) {
+  margin-bottom: 35px;
+}
+.bestsellers-card:nth-child(4) {
+  margin-bottom: 27px;
 }
 
 .bestsellers-card__image {
@@ -763,6 +776,8 @@ template {
   flex-direction: column;
   margin: 0;
   justify-content: space-between;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .bestsellers-card__title {
@@ -793,6 +808,7 @@ template {
   line-height: 24px;
   letter-spacing: 0.2px;
   color: #1565D8;
+  height: 30px;
 }
 
 .bestsellers-card__buttons {
@@ -882,6 +898,7 @@ template {
 }
 
 .categories-slider__button--prev {
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 1.5));
   background-image: url(../img/button-prev.svg);
   left: 0;
   transform: translateX(-50%);
@@ -892,6 +909,7 @@ template {
 }
 
 .categories-slider__button--next {
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 1.5));
   background-image: url(../img/button-next.svg);
   right: 0;
   transform: translateX(50%);
@@ -963,9 +981,10 @@ template {
 }
 
 .unreleased-slider__button--prev {
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 1.5));
   position: absolute;
   left: auto;
-  right: 84px;
+  right: 50px;
   background-image: url(../img/button-prev-light.svg);
   transform: translateX(-50%);
 }
@@ -975,6 +994,7 @@ template {
 }
 
 .unreleased-slider__button--next {
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 1.5));
   position: absolute;
   right: 0;
   background-image: url(../img/button-next-light.svg);
@@ -985,7 +1005,7 @@ template {
 }
 
 .history-container {
-  padding-top: 109px;
+  padding-top: 100px;
   padding-bottom: 100px;
   width: 1005px;
 }
@@ -1011,7 +1031,7 @@ template {
 .history__text {
   width: 50%;
   width: 382px;
-  margin-right: 28px;
+  margin-right: 35px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -1033,14 +1053,15 @@ template {
   left: 50%;
   top: 50%;
   transform: translateX(-50%);
+  transform: translateX(-50%);
   transform: translateY(-50%);
   background-size: 39px;
   background-position: center;
   background-color: #fff;
   border-radius: 50%;
   border: none;
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
   background-image: url(../img/playbutton_blue.svg);
   background-repeat: no-repeat;
   background-size: 30px;
@@ -1054,6 +1075,10 @@ template {
 
 .history-video2 {
   position: relative;
+}
+
+.history-video2__image {
+  margin-bottom: 13px;
 }
 
 .history-video2__button {
@@ -1074,6 +1099,38 @@ template {
   background-image: url(../img/playbutton_white.svg);
   background-repeat: no-repeat;
   background-size: 30px;
+}
+
+.history__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.history-video__name {
+  margin: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0.2px;
+  color: #183B56;
+  margin-bottom: 7px;
+}
+
+.history-video__author {
+  margin: 0;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5A7184;
+}
+
+.history__bookmark {
+  margin-top: 8px;
 }
 
 .partners {
@@ -1116,14 +1173,14 @@ template {
 
 .blog-container {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 71px;
 }
 
 .blog-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .blog__title {
@@ -1147,7 +1204,7 @@ template {
   letter-spacing: 0.2px;
   color: #1565D8;
   background-color: transparent;
-  padding: 12px 57px;
+  padding: 12px 54px;
   border: 2px solid #1565D8;
   box-sizing: border-box;
   border-radius: 22px;
@@ -1160,7 +1217,7 @@ template {
 }
 
 .blog-story {
-  max-width: 536px;
+  max-width: 556px;
 }
 
 .blog-story__image {
@@ -1179,6 +1236,7 @@ template {
   color: #183B56;
   margin-top: 0;
   margin-bottom: 16px;
+  margin-left: 10px;
 }
 
 .blog-story__text {
@@ -1188,6 +1246,7 @@ template {
   font-size: 18px;
   line-height: 32px;
   color: #5A7184;
+  margin-left: 10px;
 }
 
 .blog-article {
@@ -1224,7 +1283,7 @@ template {
   line-height: 32px;
   letter-spacing: 0.2px;
   color: #183B56;
-  margin-top: 17px;
+  margin-top: 23px;
   margin-bottom: 17px;
 }
 
@@ -1265,6 +1324,7 @@ template {
   letter-spacing: 0.2px;
   color: #FFFFFF;
   width: 393px;
+  margin-bottom: 18px;
 }
 .newsletter-subscribe {
   position: relative;
@@ -1323,7 +1383,7 @@ template {
   color: #FFFFFF;
   background-color: #FAAD13;
   border-radius: 4px;
-  padding: 13px 18px;
+  padding: 13px 28px;
 }
 
 .subsribe__input {
@@ -1341,11 +1401,14 @@ template {
   padding-top: 108px;
 }
 
-.footer-info {
+.footer-top {
   display: flex;
-  justify-content: space-between;
   padding-right: 149px;
-  margin-bottom: 96px;
+  margin-bottom: 73px;
+}
+
+.footer-info {
+  margin-right: 30px;
 }
 
 .footer-logo {
@@ -1371,8 +1434,15 @@ template {
   margin-right: 6px;
 }
 
+.footer-link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .footer-title {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
@@ -1384,6 +1454,7 @@ template {
 .footel-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .list-item {
