@@ -16,7 +16,7 @@ $modalEmail = $_POST['modalEmail'];
 
 if(isset($_POST['modalEmail'])){
     // если есть что-то в $_POST['email']
-    $title = "View ohter options Best Tour Plan";
+    $title = "Новый заказ на Ehya";
     $body = "
     <h2>Новый запрос</h2> 
     <b>Имя:</b> $name<br>
@@ -27,11 +27,11 @@ if(isset($_POST['modalEmail'])){
 } else {
     if(isset($_POST['email'])){
     // если есть что-то в $_POST['email']
-    $title = "Новая пописка на Best Tour Plan";
+    $title = "Новая пописка на Ehya";
     $body = 'User mail: ' . $_POST['email'];
     }    else {
     // если нет, отправлена форма с телефоном и пр.
-    $title = "Новое обращение Best Tour Plan";
+    $title = "Новое обращение Ehya";
     $body = "
     <h2>Новое обращение</h2> 
     <b>Имя:</b> $name<br>
@@ -72,7 +72,7 @@ try {
     $mail->Password   = 'jqpijbsxbvgrucdr'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('kasdu01@yandex.ru', 'Best Tour Plan'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('kasdu01@yandex.ru', 'Ehya - bookstore'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('kasdu01@yandex.ru');  
