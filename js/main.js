@@ -8,13 +8,24 @@
     prevEl: '.categories-slider__button--prev',
   },
    keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-    pageUpDown: true,
-  },
+      enabled: true,
+      onlyInViewport: false,
+      pageUpDown: true,
+   },
    autoHeight: true,
-   slidesPerView: 4,
+  //  slidesPerView: 3,
    spaceBetween: 27,
+   breakpoints: {
+     767: {
+       slidesPerView: 2
+     },
+     992: {
+       slidesPerView: 3
+     },
+     1199: {
+       slidesPerView: 4
+     }
+   }
   });
 
 
@@ -24,17 +35,35 @@
 
   // Navigation arrows
   navigation: {
-    nextEl: '.unreleased-slider__button--next',
-    prevEl: '.unreleased-slider__button--prev',
+    nextEl: '.unreleased__button--next',
+    prevEl: '.unreleased__button--prev',
   },
    keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-    pageUpDown: true,
-  },
+      enabled: true,
+      onlyInViewport: false,
+      pageUpDown: true,
+    },
    autoHeight: true,
    slidesPerView: 5,
    spaceBetween: 30,
+      breakpoints: {
+     460: {
+       slidesPerView: 1
+     },  
+     512: {
+       slidesPerView: 2,
+       spaceBetween: null,
+     },  
+     767: {
+       slidesPerView: 3
+     },
+     992: {
+       slidesPerView: 4
+     },
+     1199: {
+       slidesPerView: 5
+     }
+   }
   });
 
 
@@ -87,11 +116,25 @@
     modalOverlay.addClass("modal__overlay--visible");
     modalDialog.addClass("modal__dialog--visible");
     $('body').css('overflow', 'hidden');
+    $('body').css('padding-right', scrollbarWidth());
+  };
+
+  function scrollbarWidth() {
+    var block = $('<div>').css({'height':'50px','width':'50px'}),
+        indicator = $('<div>').css({'height':'200px'});
+
+    $('body').append(block.append(indicator));
+    var w1 = $('div', block).innerWidth();    
+    block.css('overflow-y', 'scroll');
+    var w2 = $('div', block).innerWidth();
+    $(block).remove();
+    return (w1 - w2);
   };
   
   // функция закрытия окна
   function closeModal(event) {
     $('body').css('overflow', 'auto');
+    $('body').css('padding-right', "0px");
     event.preventDefault();
     var modalOverlay = $(".modal__overlay");
     var modalDialog = $(".modal__dialog");

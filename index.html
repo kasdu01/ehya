@@ -14,9 +14,17 @@
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <header class="header">
+    <header class="header header--mobile_fixed">
       <div class="container">
         <div class="header-menu">
           <a href="#" class="logo"><img class="logo__image" src="img/logo.svg" alt="Logo: ehya" /></a>
@@ -25,7 +33,7 @@
             <a href="#" class="header-nav__link">Книги</a>
             <a href="#" class="header-nav__link">Блог</a>
           </nav>
-          <button data-toggle="modal" class="button header-menu__button"><a class="lnk" href="#">Получить</a></button>
+          <button data-toggle="modal" class="button header-menu__button">Получить</button>
           <button class="menu-button header-menu__menu-button">
             <span class="menu-button__line"></span>
             <span class="menu-button__line"></span>
@@ -35,27 +43,56 @@
         <!-- /.navbar-top -->
       </div>
       <!-- /.container -->
+      <div class="navbar">
+        <div class="navbar-bottom">
+          <div class="container">
+            <ul class="navbar-menu">
+              <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+                <a href="#" class="user navbar__user navbar__user--mobile--visible">
+                  <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar" />
+                  <span class="user__name user__name--light">Nathan</span>
+                </a>
+              </li>
+              <li class="navbar-menu__item navbar-menu__item--mobile--visible">
+                <form action="#" class="search navbar__search navbar__search--mobile--visible">
+                  <input type="text" class="search__input" placeholder="Search Location" />
+                  <button class="search__button"><img src="img/search.svg" alt="Icon: search" /></button>
+                </form>
+              </li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">All Deals</a></li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotels</a></li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Activites</a></li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotel Day Packages</a></li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Rastaraunts</a></li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Events</a></li>
+              <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Rodrigues</a></li>
+            </ul>
+            <!-- /.navbar-menu -->
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.navbar-bottom -->
+      </div>
+      <!-- /.navbar -->
     </header>
     <section class="book">
       <div class="container book-container">
-        <div class="book-text">          
-            <h1 class="book-title">
-              <span style="color: #faad13">Design Theory:</span></br>
-              <span style="color: #183b56">The Psychology of Graphic Design Pricing</span>
-            </h1>
-            <!-- /.book-title -->
-            <span class="book-author">
-              КНИГА МИШЕЛЯ ЯНГА
-            </span>
-            <span class="book-author__text">Спустя 15 лет я управляю собственной студией, выполнив тысячи проектов для крупных клиентов. Теперь я делюсь своими золотыми стратегиями ценообразования на творческую работу.</span>
-            <div class="book-button">
-              <button data-toggle="modal" class="book-button__buy button">
-               купить сейчас
-              </button>
-               <button class="book-button__read button"><a class="lnk" href="#">читать демо</a>
-              </button>              
-            </div>
-            <!-- /.book-button -->           
+        <div class="book-text">
+          <h1 class="book-title">
+            <span class="book-name" style="color: #faad13">Design Theory:</span>
+            <span style="color: #183b56">The Psychology of Graphic Design Pricing</span>
+          </h1>
+          <!-- /.book-title -->
+          <span class="book-author"> КНИГА МИШЕЛЯ ЯНГА </span>
+          <span class="book-text__author"
+            >Спустя 15 лет я управляю собственной студией, выполнив тысячи проектов для крупных клиентов. Теперь я делюсь своими
+            золотыми стратегиями ценообразования на творческую работу.</span
+          >
+          <div class="book-button">
+            <button data-toggle="modal" class="book-button__buy button">купить сейчас</button>
+            <button class="book-button__read button">читать демо</button>
+          </div>
+          <!-- /.book-button -->
         </div>
         <!-- /.book-text -->
         <div class="book-image">
@@ -72,7 +109,7 @@
           <h2 class="offer-title">Рекомендации</h2>
           <div class="recommendations-wrap">
             <div class="recommendations-card">
-              <img src="img/card1.jpg" alt="" class="recommendations-card__image" />             
+              <img src="img/card1.jpg" alt="" class="recommendations-card__image" />
               <div class="recommendations-card__text">
                 <h3 class="recommendations-card__title">The World of Abstract Art</h3>
                 <span class="recommendations-card__theme">Art & Design</span>
@@ -81,299 +118,320 @@
                   <button data-toggle="modal" class="button recommendations-card__button">Купить</button>
                   <button class="button recommendations-card__favourites">
                     <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="favourites" d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z" fill="#959EAD"/>
+                      <path
+                        class="favourites"
+                        d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+                        fill="#959EAD"
+                      />
                     </svg>
-                  </button>                    
+                  </button>
                 </div>
                 <!-- /.recommendations-card__buttons -->
-             
               </div>
               <!-- /.recommendations-card__text -->
-            </div>  
-              <!--/.recommendations-card1  -->         
-           <div class="recommendations-card">
-              <img src="img/card2.jpg" alt="" class="recommendations-card__image" />             
+            </div>
+            <!--/.recommendations-card1  -->
+            <div class="recommendations-card">
+              <img src="img/card2.jpg" alt="" class="recommendations-card__image" />
               <div class="recommendations-card__text">
                 <h3 class="recommendations-card__title">Educated : a&nbsp;Memoir</h3>
                 <span class="recommendations-card__theme">Education</span>
-                <span class="recommendations-card__price">$28.00</span> 
+                <span class="recommendations-card__price">$28.00</span>
                 <div class="recommendations-card__buttons">
                   <button data-toggle="modal" class="button recommendations-card__button">Купить</button>
                   <!-- <button class="button recommendations-card__favourites"><img src="img/favourites.svg" alt=""></button>                    -->
                   <button class="button recommendations-card__favourites">
                     <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="favourites" d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z" fill="#959EAD"/>
+                      <path
+                        class="favourites"
+                        d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+                        fill="#959EAD"
+                      />
                     </svg>
-                  </button>                   
-                </div>              
+                  </button>
+                </div>
               </div>
               <!-- /.recommendations-card__text -->
-            </div>  
-              <!--/.recommendations-card2  -->
-           <div class="recommendations-card">
-              <img src="img/card3.jpg" alt="" class="recommendations-card__image" />             
+            </div>
+            <!--/.recommendations-card2  -->
+            <div class="recommendations-card">
+              <img src="img/card3.jpg" alt="" class="recommendations-card__image" />
               <div class="recommendations-card__text">
                 <h3 class="recommendations-card__title">The Blue Flowers Ray…</h3>
                 <span class="recommendations-card__theme">Novel</span>
-                <span class="recommendations-card__price">$19.50</span> 
+                <span class="recommendations-card__price">$19.50</span>
                 <div class="recommendations-card__buttons">
                   <button data-toggle="modal" class="button recommendations-card__button">Купить</button>
                   <button class="button recommendations-card__favourites">
                     <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="favourites" d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z" fill="#959EAD"/>
+                      <path
+                        class="favourites"
+                        d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+                        fill="#959EAD"
+                      />
                     </svg>
-                  </button>                   
-                </div>               
+                  </button>
+                </div>
               </div>
               <!-- /.recommendations-card__text -->
-            </div>  
-              <!--/.recommendations-card3  -->
-           <div class="recommendations-card">
-              <img src="img/card4.jpg" alt="" class="recommendations-card__image" />             
+            </div>
+            <!--/.recommendations-card3  -->
+            <div class="recommendations-card">
+              <img src="img/card4.jpg" alt="" class="recommendations-card__image" />
               <div class="recommendations-card__text">
                 <h3 class="recommendations-card__title">There There : a&nbsp;Novel by TO</h3>
                 <span class="recommendations-card__theme">Novel</span>
-                <span class="recommendations-card__price">$20.00</span> 
+                <span class="recommendations-card__price">$20.00</span>
                 <div class="recommendations-card__buttons">
                   <button data-toggle="modal" class="button recommendations-card__button">Купить</button>
                   <button class="button recommendations-card__favourites">
                     <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="favourites" d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z" fill="#959EAD"/>
+                      <path
+                        class="favourites"
+                        d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+                        fill="#959EAD"
+                      />
                     </svg>
-                  </button>                   
-                </div>               
+                  </button>
+                </div>
               </div>
               <!-- /.recommendations-card__text -->
-            </div>  
-              <!--/.recommendations-card4  -->
-           <div class="recommendations-card">
-              <img src="img/card5.jpg" alt="" class="recommendations-card__image" />             
+            </div>
+            <!--/.recommendations-card4  -->
+            <div class="recommendations-card">
+              <img src="img/card5.jpg" alt="" class="recommendations-card__image" />
               <div class="recommendations-card__text">
                 <h3 class="recommendations-card__title">WMNDFL : The&nbsp;Inspiration</h3>
                 <span class="recommendations-card__theme">Business</span>
-                <span class="recommendations-card__price">$23.00</span> 
+                <span class="recommendations-card__price">$23.00</span>
                 <div class="recommendations-card__buttons">
                   <button data-toggle="modal" class="button recommendations-card__button">Купить</button>
                   <button class="button recommendations-card__favourites">
                     <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="favourites" d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z" fill="#959EAD"/>
+                      <path
+                        class="favourites"
+                        d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+                        fill="#959EAD"
+                      />
                     </svg>
-                  </button>                  
-                </div>             
+                  </button>
+                </div>
               </div>
               <!-- /.recommendations-card__text -->
-            </div>  
-              <!--/.recommendations-card5  -->
-           <div class="recommendations-card">
-              <img src="img/card6.jpg" alt="" class="recommendations-card__image" />             
+            </div>
+            <!--/.recommendations-card5  -->
+            <div class="recommendations-card">
+              <img src="img/card6.jpg" alt="" class="recommendations-card__image" />
               <div class="recommendations-card__text">
                 <h3 class="recommendations-card__title">Making Things&nbsp;Happen</h3>
                 <span class="recommendations-card__theme">Motivation</span>
-                <span class="recommendations-card__price">$23.00</span> 
+                <span class="recommendations-card__price">$23.00</span>
                 <div class="recommendations-card__buttons">
                   <button data-toggle="modal" class="button recommendations-card__button">Купить</button>
                   <button class="button recommendations-card__favourites">
                     <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="favourites" d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z" fill="#959EAD"/>
+                      <path
+                        class="favourites"
+                        d="M17.2422 1.46484C15.3086 -0.1875 12.4609 0.128906 10.668 1.95703L10 2.66016L9.29688 1.95703C7.53906 0.128906 4.65625 -0.1875 2.72266 1.46484C0.507812 3.36328 0.402344 6.73828 2.37109 8.77734L9.19141 15.8086C9.61328 16.2656 10.3516 16.2656 10.7734 15.8086L17.5938 8.77734C19.5625 6.73828 19.457 3.36328 17.2422 1.46484Z"
+                        fill="#959EAD"
+                      />
                     </svg>
-                  </button>                  
-                </div>               
+                  </button>
+                </div>
               </div>
               <!-- /.recommendations-card__text -->
-            </div>  
-              <!--/.recommendations-card6  -->                                          
+            </div>
+            <!--/.recommendations-card6  -->
           </div>
           <!-- /.recommendations-wrap -->
-          <button class="button recommendations-button"><a class="lnk" href="#">БОЛЬШЕ РЕКОМЕНДАЦИЙ</a></button>
-          </div>
-         <!--/.recommendations  -->
-         <div class="bestsellers">
+          <button class="button recommendations-button">БОЛЬШЕ РЕКОМЕНДАЦИЙ</button>
+        </div>
+        <!--/.recommendations  -->
+        <div class="bestsellers">
           <h2 class="offer-title">Топ Месяца</h2>
           <div class="bestsellers-wrap">
-           <div class="bestsellers-card">
-              <img src="img/card-top1.jpg" alt="" class="bestsellers-card__image" />             
+            <div class="bestsellers-card">
+              <img src="img/card-top1.jpg" alt="" class="bestsellers-card__image" />
               <div class="bestsellers-card__text">
                 <h3 class="bestsellers-card__title">Sprint : Solve, Test in 5 Days</h3>
-                <span class="bestsellers-card__price">$23.00</span> 
+                <span class="bestsellers-card__price">$23.00</span>
                 <div class="bestsellers-card__buttons">
                   <button data-toggle="modal" class="button bestsellers-card__button">Купить</button>
-                </div>               
+                </div>
               </div>
               <!-- /.recommendations-card__text -->
-            </div> 
+            </div>
             <!--/.bestsellers-card1  -->
-           <div class="bestsellers-card">
-              <img src="img/card-top2.jpg" alt="" class="bestsellers-card__image" />             
+            <div class="bestsellers-card">
+              <img src="img/card-top2.jpg" alt="" class="bestsellers-card__image" />
               <div class="bestsellers-card__text">
                 <h3 class="bestsellers-card__title">Hacking Growth Break Problem</h3>
-                <span class="bestsellers-card__price">$23.00</span> 
+                <span class="bestsellers-card__price">$23.00</span>
                 <div class="bestsellers-card__buttons">
                   <button data-toggle="modal" class="button bestsellers-card__button">Купить</button>
-                </div>               
+                </div>
               </div>
               <!-- /.recommendations-card__text -->
-            </div> 
+            </div>
             <!--/.bestsellers-card2  -->
-           <div class="bestsellers-card">
-              <img src="img/card-top3.jpg" alt="" class="bestsellers-card__image" />             
+            <div class="bestsellers-card">
+              <img src="img/card-top3.jpg" alt="" class="bestsellers-card__image" />
               <div class="bestsellers-card__text">
                 <h3 class="bestsellers-card__title">Very Nice a Novel by Mercy</h3>
-                <span class="bestsellers-card__price">$23.00</span> 
+                <span class="bestsellers-card__price">$23.00</span>
                 <div class="bestsellers-card__buttons">
                   <button data-toggle="modal" class="button bestsellers-card__button">Купить</button>
-                </div>               
+                </div>
               </div>
               <!-- /.recommendations-card__text -->
-            </div> 
+            </div>
             <!--/.bestsellers-card3  -->
-           <div class="bestsellers-card">
-              <img src="img/card-top4.jpg" alt="" class="bestsellers-card__image" />             
+            <div class="bestsellers-card">
+              <img src="img/card-top4.jpg" alt="" class="bestsellers-card__image" />
               <div class="bestsellers-card__text">
                 <h3 class="bestsellers-card__title">Hooked : How to Build Products</h3>
-                <span class="bestsellers-card__price">$23.00</span> 
+                <span class="bestsellers-card__price">$23.00</span>
                 <div class="bestsellers-card__buttons">
                   <button data-toggle="modal" class="button bestsellers-card__button">Купить</button>
-                </div>               
+                </div>
               </div>
               <!-- /.recommendations-card__text -->
-            </div> 
+            </div>
             <!--/.bestsellers-card4  -->
-            <hr class="bestsellers__line">
-            <button class="button bestsellers-button"><a class="lnk" href="#">Лучшие книги</a></button>
-           </div>
-           <!-- /.bestsellers-wrap -->
+            <hr class="bestsellers__line" />
+            <button class="button bestsellers-button">Лучшие книги</button>
           </div>
-      <!-- /.bestsellers -->
+          <!-- /.bestsellers-wrap -->
+        </div>
+        <!-- /.bestsellers -->
       </div>
     </section>
-    <hr class="separate container">
+    <hr class="separate container" />
 
-    <section class="categories">
+    <div class="categories">
       <div class="container categories-container">
         <div class="categories-slider">
-        <div class="swiper categories__swiper">
-           <div class="swiper-wrapper">
-             <div class="swiper-slide">
-               <div class="swiper-slide__image">
-               <img src="img/slide1.jpg" alt="slide1">
-             </div>
+          <div class="swiper categories__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-slide__image">
+                  <img src="img/slide1.jpg" alt="slide1" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide">
+                <div class="swiper-slide__image">
+                  <img src="img/slide2.jpg" alt="slide2" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide">
+                <div class="swiper-slide__image">
+                  <img src="img/slide3.jpg" alt="slide3" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide">
+                <div class="swiper-slide__image">
+                  <img src="img/slide4.jpg" alt="slide4" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide">
+                <div class="swiper-slide__image">
+                  <img src="img/slide1.jpg" alt="slide5" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide">
+                <div class="swiper-slide__image">
+                  <img src="img/slide2.jpg" alt="slide6" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide">
+                <div class="swiper-slide__image">
+                  <img src="img/slide3.jpg" alt="slide7" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
             </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="swiper-slide__image">
-               <img src="img/slide2.jpg" alt="slide2">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="swiper-slide__image">
-               <img src="img/slide3.jpg" alt="slide3">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="swiper-slide__image">
-               <img src="img/slide4.jpg" alt="slide4">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="swiper-slide__image">
-               <img src="img/slide1.jpg" alt="slide5">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="swiper-slide__image">
-               <img src="img/slide2.jpg" alt="slide6">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="swiper-slide__image">
-               <img src="img/slide3.jpg" alt="slide7">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-           </div>
-           <!-- /.swiper-wrappe -->
+            <!-- /.swiper-wrappe -->
 
-          <!-- <button class="button categories-slider__button categories-slider__button--prev"><img src="img/button-prev.svg" alt=""></button>
+            <!-- <button class="button categories-slider__button categories-slider__button--prev"><img src="img/button-prev.svg" alt=""></button>
           <button class="button categories-slider__button categories-slider__button--next"><img src="img/button-next.svg" alt=""></button>            -->
-        </div> 
-         <!--/.categories-slider  -->
-            <div class="categories-slider__button categories-slider__button--prev swiper-button-prev"></div>
-            <div class="categories-slider__button categories-slider__button--next swiper-button-next"></div> 
+          </div>
+          <!--/.categories-slider  -->
+          <div class="categories-slider__button categories-slider__button--prev swiper-button-prev"></div>
+          <div class="categories-slider__button categories-slider__button--next swiper-button-next"></div>
         </div>
-        <!-- /.categories-slider -->        
+        <!-- /.categories-slider -->
       </div>
       <!-- /.container -->
-    </section>
+    </div>
     <!-- /.categories -->
     <section class="unreleased">
       <div class="container unreleased-container">
         <div class="unreleased-top">
           <h2 class="unreleased-title">Неизданные книги</h2>
-          <div class="unreleased-slider__button unreleased-slider__button--prev swiper-button-prev"></div>
-          <div class="unreleased-slider__button unreleased-slider__button--next swiper-button-next"></div>
+          <div class="unreleased__button unreleased__button--prev swiper-button-prev"></div>
+          <div class="unreleased__button unreleased__button--next swiper-button-next"></div>
         </div>
         <div class="unreleased-slider">
-        <div class="swiper unreleased__swiper">
-           <div class="swiper-wrapper">
-             <div class="swiper-slide">
-               <div class="unreleased-slide__card">
-               <img class="unreleased-slide__image" src="img/unreleased-card1.png" alt="unreleased-card1">
-             </div>
+          <div class="swiper unreleased__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide unreleased-slide">
+                <div class="unreleased-slide__card">
+                  <img class="unreleased-slide__image" src="img/unreleased-card1.png" alt="unreleased-card1" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide unreleased-slide">
+                <div class="unreleased-slide__card">
+                  <img class="unreleased-slide__image" src="img/unreleased-card2.png" alt="unreleased-card2" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide unreleased-slide">
+                <div class="unreleased-slide__card">
+                  <img class="unreleased-slide__image" src="img/unreleased-card3.png" alt="unreleased-card3" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide unreleased-slide">
+                <div class="unreleased-slide__card">
+                  <img class="unreleased-slide__image" src="img/unreleased-card4.png" alt="unreleased-card4" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide unreleased-slide">
+                <div class="unreleased-slide__card">
+                  <img class="unreleased-slide__image" src="img/unreleased-card5.png" alt="unreleased-card5" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide unreleased-slide">
+                <div class="unreleased-slide__card">
+                  <img class="unreleased-slide__image" src="img/unreleased-card1.png" alt="unreleased-card6" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
+              <div class="swiper-slide unreleased-slide">
+                <div class="unreleased-slide__card">
+                  <img class="unreleased-slide__image" src="img/unreleased-card3.png" alt="unreleased-card7" />
+                </div>
+              </div>
+              <!-- ./swiper-slide -->
             </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="unreleased-slide__card">
-               <img class="unreleased-slide__image" src="img/unreleased-card2.png" alt="unreleased-card2">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="unreleased-slide__card">
-               <img class="unreleased-slide__image" src="img/unreleased-card3.png" alt="unreleased-card3">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="unreleased-slide__card">
-               <img class="unreleased-slide__image" src="img/unreleased-card4.png" alt="unreleased-card4">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="unreleased-slide__card">
-               <img class="unreleased-slide__image" src="img/unreleased-card5.png" alt="unreleased-card5">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="unreleased-slide__card">
-               <img class="unreleased-slide__image" src="img/unreleased-card1.png" alt="unreleased-card6">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-             <div class="swiper-slide">
-               <div class="unreleased-slide__card">
-               <img class="unreleased-slide__image" src="img/unreleased-card3.png" alt="unreleased-card7">
-             </div>
-            </div>
-            <!-- ./swiper-slide -->
-           </div>
-           <!-- /.swiper-wrappe -->
+            <!-- /.swiper-wrappe -->
 
-          <!-- <button class="button categories-slider__button categories-slider__button--prev"><img src="img/button-prev.svg" alt=""></button>
+            <!-- <button class="button categories-slider__button categories-slider__button--prev"><img src="img/button-prev.svg" alt=""></button>
           <button class="button categories-slider__button categories-slider__button--next"><img src="img/button-next.svg" alt=""></button>            -->
-        </div> 
-         <!--/.categories-slider  -->
-          
-           
+          </div>
+          <!--/.categories-slider  -->
         </div>
-        <!-- /.categories-slider -->        
-      </div>      
+        <!-- /.categories-slider -->
+      </div>
     </section>
     <!-- /.unreleased -->
     <section class="history">
@@ -381,149 +439,154 @@
         <div class="history-header">
           <div class="history__title">История Автора</div>
           <div class="history__text">
-            Это раздел авторского рассказа. Каждую неделю мы стараемся рассказать вам историю писателя. Расскажем всем о закулисье их книг.
-           </div>
+            Это раздел авторского рассказа. Каждую неделю мы стараемся рассказать вам историю писателя. Расскажем всем о закулисье
+            их книг.
+          </div>
         </div>
         <!-- /.history-header -->
         <div class="history-video">
           <div class="history-video1">
-            <img src="img/video1.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY">
-            <button class="button history-video1__button"></button>
+            <img src="img/video1.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY" />
+            <a class="button history-video1__button" data-fancybox href="https://www.youtube.com/watch?v=gZ1CNOFmjLY"></a>
           </div>
           <!-- /.history-video1 -->
-          <div class="history-video2">
-            <img class="history-video2__image"src="img/video2.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY">
-            <button class="button history-video2__button"></button>
-            <div class="history__info">
-              <div class="history-video__description">
-                <h2 class="history-video__name">Emelda Scandroot</h2>
-                <span class="history-video__author">Author of Books Tittle</span>
+          <div class="history-video__mini">
+            <div class="history-video2">
+              <img class="history-video2__image" src="img/video2.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY" />
+              <a class="button history-video2__button" data-fancybox href="https://www.youtube.com/watch?v=gZ1CNOFmjLY"></a>
+              <div class="history__info">
+                <div class="history-video__description">
+                  <h2 class="history-video__name">Emelda Scandroot</h2>
+                  <span class="history-video__author">Author of Books Tittle</span>
+                </div>
+                <img src="img/bookmark.svg" alt="" class="history__bookmark" />
               </div>
-              <img src="img/bookmark.svg" alt="" class="history__bookmark">
             </div>
-          </div>
-          <!-- /.history-video2 -->
-          <div class="history-video2">
-            <img class="history-video2__image" src="img/video3.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY">
-            <button class="button history-video2__button"></button>
-            <div class="history__info">
-              <div class="history-video__description">
-                <h2 class="history-video__name">Mar Reuda</h2>
-                <span class="history-video__author">Author of Books Tittle</span>
+            <!-- /.history-video2 -->
+            <div class="history-video2">
+              <img class="history-video2__image" src="img/video3.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY" />
+              <a class="button history-video2__button" data-fancybox href="https://www.youtube.com/watch?v=gZ1CNOFmjLY"></a>
+              <div class="history__info">
+                <div class="history-video__description">
+                  <h2 class="history-video__name">Mar Reuda</h2>
+                  <span class="history-video__author">Author of Books Tittle</span>
+                </div>
+                <img src="img/bookmark.svg" alt="" class="history__bookmark" />
               </div>
-              <img src="img/bookmark.svg" alt="" class="history__bookmark">
-            </div>            
-          </div>
-          <!-- /.history-video3 -->
-          <div class="history-video2">
-            <img class="history-video2__image" src="img/video4.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY">
-            <button class="button history-video2__button"></button>
-            <div class="history__info">
-              <div class="history-video__description">
-                <h2 class="history-video__name">Nembo Lukeni</h2>
-                <span class="history-video__author">Author of Books Tittle</span>
+            </div>
+            <!-- /.history-video3 -->
+            <div class="history-video2">
+              <img class="history-video2__image" src="img/video4.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY" />
+              <a class="button history-video2__button" data-fancybox href="https://www.youtube.com/watch?v=gZ1CNOFmjLY"></a>
+              <div class="history__info">
+                <div class="history-video__description">
+                  <h2 class="history-video__name">Nembo Lukeni</h2>
+                  <span class="history-video__author">Author of Books Tittle</span>
+                </div>
+                <img src="img/bookmark.svg" alt="" class="history__bookmark" />
               </div>
-              <img src="img/bookmark.svg" alt="" class="history__bookmark">
-            </div>            
+            </div>
+            <!-- /.history-video4 -->
           </div>
-          <!-- /.history-video4 -->
+          <!-- /.history-video__mini -->
         </div>
         <!-- /.history-video -->
-        
       </div>
     </section>
     <!-- /.history -->
     <section class="partners">
       <div class="container partners-container">
-        <div class="patrners-title">
-          <h2 class="patrners__title">Некоторые из издателей, с которыми мы сотрудничали</h2>
+        <div class="partners-title">
+          <h2 class="partners__title">Некоторые из издателей, с которыми мы сотрудничали</h2>
         </div>
-        <!-- /.patrners-title -->
-          <div class="partners-wrapper">
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner1.svg" alt="Slack" class="partners__image"></a>
-            </div>            
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner2.svg" alt="Slack" class="partners__image"></a>
-            </div>            
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner3.svg" alt="Slack" class="partners__image"></a>
-            </div>            
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner4.svg" alt="Slack" class="partners__image"></a>
-            </div>            
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner5.svg" alt="Slack" class="partners__image"></a>
-            </div>            
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner6.svg" alt="Slack" class="partners__image"></a>
-            </div>            
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner2.svg" alt="Slack" class="partners__image"></a>
-            </div>            
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner5.svg" alt="Slack" class="partners__image"></a>
-            </div>            
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner1.svg" alt="Slack" class="partners__image"></a>
-            </div>            
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner6.svg" alt="Slack" class="partners__image"></a>
-            </div>            
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner3.svg" alt="Slack" class="partners__image"></a>
-            </div>            
-            <div class="partners__logo">
-              <a href="#"><img src="img/partner4.svg" alt="Slack" class="partners__image"></a>
-            </div>            
+        <!-- /.partners-title -->
+        <div class="partners-wrapper">
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner1.svg" alt="Slack" class="partners__image" /></a>
           </div>
-          <!-- /.partners-wrapper -->        
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner2.svg" alt="Slack" class="partners__image" /></a>
+          </div>
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner3.svg" alt="Slack" class="partners__image" /></a>
+          </div>
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner4.svg" alt="Slack" class="partners__image" /></a>
+          </div>
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner5.svg" alt="Slack" class="partners__image" /></a>
+          </div>
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner6.svg" alt="Slack" class="partners__image" /></a>
+          </div>
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner2.svg" alt="Slack" class="partners__image" /></a>
+          </div>
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner5.svg" alt="Slack" class="partners__image" /></a>
+          </div>
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner1.svg" alt="Slack" class="partners__image" /></a>
+          </div>
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner6.svg" alt="Slack" class="partners__image" /></a>
+          </div>
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner3.svg" alt="Slack" class="partners__image" /></a>
+          </div>
+          <div class="partners__logo">
+            <a href="#"><img src="img/partner4.svg" alt="Slack" class="partners__image" /></a>
+          </div>
+        </div>
+        <!-- /.partners-wrapper -->
       </div>
       <!-- /.partners-container -->
     </section>
     <section class="blog">
       <div class="container blog-container">
-        <div class="blog-header">
+        <div class="blog-header blog-button">
           <h2 class="blog__title">Ehya Блог</h2>
-          <button class="button blog-button__all"><a class="lnk" href="#">Все блоги</a></button>
+          <button class="button blog-button__all">Все блоги</button>
         </div>
         <div class="blog-grid">
           <div class="blog-story">
             <div class="blog-story__imag">
-              <img class="blog-story__image" src="img/blog1.jpg" alt="blog image">
+              <img class="blog-story__image" src="img/blog1.jpg" alt="blog image" />
             </div>
             <h2 class="blog-story__title">Success Steps For Your Business Life</h2>
-            <span class="blog-story__text">This is the author story section. Every week we try to give you the story of book writer. Tell all of you the behind the scene of their books.</span>
+            <span class="blog-story__text"
+              >This is the author story section. Every week we try to give you the story of book writer. Tell all of you the
+              behind the scene of their books.</span
+            >
           </div>
           <!-- /.blog-story -->
           <div class="blog-article">
             <div class="blog-article__card">
-              <img class="blog-article__image" src="img/blog2.png" alt="blog image">
-              <div class="blog-article__info">
+              <img class="blog-article__image" src="img/blog2.png" alt="blog image" />
+              <div class="blog-article__info blog-button">
                 <span class="blog__date">23 МАРТА 2020</span>
                 <p class="blog-article__text">29 Motivational Quotes for Work Environments</p>
-                <botton class="blog-button__read"><a class="lnk" href="#">ЧИТАТЬ</a></botton>
+                <button class="button blog-button__read">ЧИТАТЬ</button>
               </div>
             </div>
             <div class="blog-article__card">
-              <img class="blog-article__image" src="img/blog3.png" alt="blog image">
-              <div class="blog-article__info">
+              <img class="blog-article__image" src="img/blog3.png" alt="blog image" />
+              <div class="blog-article__info blog-button">
                 <span class="blog__date">28 МАРТА 2020</span>
                 <p class="blog-article__text">Learn To Love Growth and&nbsp;You Will Be A Success</p>
-                <botton class="blog-button__read"><a class="lnk" href="#">ЧИТАТЬ</a></botton>
+                <button class="button blog-button__read">ЧИТАТЬ</button>
               </div>
             </div>
             <div class="blog-article__card">
-              <img class="blog-article__image" src="img/blog4.png" alt="blog image">
-              <div class="blog-article__info">
+              <img class="blog-article__image" src="img/blog4.png" alt="blog image" />
+              <div class="blog-article__info blog-button">
                 <span class="blog__date">28 МАРТА 2020</span>
                 <p class="blog-article__text">Motivation How To Build Trust at your Work</p>
-                <botton class="blog-button__read"><a class="lnk" href="#">ЧИТАТЬ</a></botton>
+                <button class="button blog-button__read">ЧИТАТЬ</button>
               </div>
             </div>
           </div>
           <!-- /.blog-article -->
-
         </div>
         <!-- /.blog-wrapper -->
       </div>
@@ -531,104 +594,95 @@
     <!-- /.blog -->
 
     <section class="subsribe">
-        <div class="container newsletter-container">
-         
-            <h2 class="newsletter-title">
-              Будь первым, кто узнает о наших акциях              
-            </h2>
-            <form action="send.php" method="POST" class="newsletter-subscribe" onsubmit="send(event, 'send.php')">
-              <div class="subsribe__input">
-                <img class="subsribe__icon" src="img/email.svg" alt="">
-              <input type="email" class="newsletter-subscribe__input" placeholder="Ваш Email" name="email" required />                
-              </div>
+      <div class="container newsletter-container">
+        <h2 class="newsletter-title">Будь первым, кто узнает о наших акциях</h2>
+        <form action="send.php" method="POST" class="newsletter-subscribe" onsubmit="send(event, 'send.php')">
+          <div class="subsribe__input">
+            <img class="subsribe__icon" src="img/email.svg" alt="" />
+            <input type="email" class="newsletter-subscribe__input" placeholder="Ваш Email" name="email" required />
+          </div>
 
-              <button class="btn newsletter-subscribe__button">Регистрация</button>
-            </form>
-
-        </div>
-        <!-- ./newsletter -->
+          <button class="btn newsletter-subscribe__button">Регистрация</button>
+        </form>
+      </div>
+      <!-- ./newsletter -->
     </section>
     <!-- /.subscribe -->
     <section class="footer">
       <div class="container footer-container">
         <div class="footer-top">
-        <div class="footer-info">
-          <a href="#"><img src="img/Logo.svg" alt="" class="footer-logo"></a>
-          <div class="footer__text">
-            <span>Создайте современный и креативный веб-сайт с crealand</span>
+          <div class="footer-info">
+            <a href="#"><img src="img/Logo.svg" alt="" class="footer-logo" /></a>
+            <div class="footer__text">
+              <span>Создайте современный и креативный веб-сайт с crealand</span>
+            </div>
+            <div class="social">
+              <a href="google.com"><img src="img/social-icon1.svg" alt="Google" class="social__icon" /></a>
+              <a href="Twitter.com"><img src="img/social-icon2.svg" alt="Twitter" class="social__icon" /></a>
+              <a href="instagram.com"><img src="img/social-icon3.svg" alt="Instagram" class="social__icon" /></a>
+              <a href="Linkdin.com"><img src="img/social-icon4.svg" alt="Linkdin" class="social__icon" /></a>
+            </div>
           </div>
-          <div class="social">
-            <a href="google.com"><img src="img/social-icon1.svg" alt="Google" class="social__icon"></a>
-            <a href="Twitter.com"><img src="img/social-icon2.svg" alt="Twitter" class="social__icon"></a>
-            <a href="instagram.com"><img src="img/social-icon3.svg" alt="Instagram" class="social__icon"></a>
-            <a href="Linkdin.com"><img src="img/social-icon4.svg" alt="Linkdin" class="social__icon"></a>
+          <!-- /.footer-info -->
+          <div class="footer-link">
+            <div class="footer-product">
+              <h3 class="footer-title">Продукт</h3>
+              <ul class="footel-list">
+                <li class="list-item"><a href="#">Лэндинг</a></li>
+                <li class="list-item"><a href="#">Функции</a></li>
+                <li class="list-item"><a href="#">Документация</a></li>
+                <li class="list-item"><a href="#">Скидки</a></li>
+                <li class="list-item"><a href="#">Расценки</a></li>
+              </ul>
+            </div>
+            <!-- /.footer-product -->
+            <div class="footer-services">
+              <h3 class="footer-title">Сервисы</h3>
+              <ul class="footel-list">
+                <li class="list-item"><a href="#">Документация</a></li>
+                <li class="list-item"><a href="#">Дизайн</a></li>
+                <li class="list-item"><a href="#">Темы</a></li>
+                <li class="list-item"><a href="#">Илюстрации</a></li>
+                <li class="list-item"><a href="#">UI Kit</a></li>
+              </ul>
+            </div>
+            <!-- /.footer-services -->
+            <div class="footer-company">
+              <h3 class="footer-title">Компания</h3>
+              <ul class="footel-list">
+                <li class="list-item"><a href="#">О нас</a></li>
+                <li class="list-item"><a href="#">Условия</a></li>
+                <li class="list-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-item"><a href="#">Careers</a></li>
+              </ul>
+            </div>
+            <!-- /.footer-company -->
+            <div class="footer-more">
+              <h3 class="footer-title">Еще..</h3>
+              <ul class="footel-list">
+                <li class="list-item"><a href="#">Документация</a></li>
+                <li class="list-item"><a href="#">Лицензия</a></li>
+                <li class="list-item"><a href="#">Изменения</a></li>
+              </ul>
+            </div>
+            <!-- /.footer-more -->
           </div>
+          <!-- /.footer-link -->
         </div>
         <!-- /.footer-info -->
-        <div class="footer-link">
-          <div class="footer-product">
-            <h3 class="footer-title">Продукт</h3>
-            <ul class="footel-list">
-              <a href="#"><li class="list-item">Лэндинг</li></a>
-              <a href="#"><li class="list-item">Функции</li></a>
-              <a href="#"><li class="list-item">Документация</li></a>
-              <a href="#"><li class="list-item">Скидки</li></a>
-              <a href="#"><li class="list-item">Расценки</li></a>
-            </ul>
+        <div class="copyright">
+          <div class="copyright__logo">
+            <!-- <img src="img/heart.svg" alt=""> -->
           </div>
-          <!-- /.footer-product -->
-          <div class="footer-services">
-            <h3 class="footer-title">Сервисы</h3>
-            <ul class="footel-list">
-              <a href="#"><li class="list-item">Документация</li></a>
-              <a href="#"><li class="list-item">Дизайн</li></a>
-              <a href="#"><li class="list-item">Темы</li></a>
-              <a href="#"><li class="list-item">Илюстрации</li></a>
-              <a href="#"><li class="list-item">UI Kit</li></a>
-            </ul>
+          <div class="copyright__text">
+            <span>Copyright © 2019. Crafted with love.</span>
           </div>
-          <!-- /.footer-services -->       
-          <div class="footer-company">
-            <h3 class="footer-title">Компания</h3>
-            <ul class="footel-list">
-              <a href="#"><li class="list-item">О нас</li></a>
-              <a href="#"><li class="list-item">Условия</li></a>
-              <a href="#"><li class="list-item">Privacy Policy</li></a>
-              <a href="#"><li class="list-item">Careers</li></a>
-            </ul>
-          </div> 
-          <!-- /.footer-company -->
-          <div class="footer-more">
-            <h3 class="footer-title">Еще..</h3>
-            <ul class="footel-list">
-              <a href="#"><li class="list-item">Документация</li></a>
-              <a href="#"><li class="list-item">Лицензия</li></a>
-              <a href="#"><li class="list-item">Изменения</li></a>
-            </ul>
-          </div> 
-          <!-- /.footer-more -->  
         </div>
-        <!-- /.footer-link -->
-        
-        </div>
-        <!-- /.footer-info -->
-      <div class="copyright">
-        <div class="copyright__logo">
-          <!-- <img src="img/heart.svg" alt=""> -->
-        </div>
-        <div class="copyright__text">
-          <span>Copyright © 2019. Crafted with love.</span>
-        </div>
-      </div>
-      <!-- /.copyright --> 
+        <!-- /.copyright -->
       </div>
       <!-- /.container footer-container -->
-
-    </section> 
+    </section>
     <!-- /.footer -->
-    <div class="test">
-      <h2>FOOTER</h2>
-    </div>
 
     <div class="modal">
       <div class="modal__overlay modal__overlay--close"></div>
@@ -671,5 +725,12 @@
     <script defer src="js/jquery.validate.min.js"></script>
     <script defer src="js/main.js"></script>
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
