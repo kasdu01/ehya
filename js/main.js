@@ -14,15 +14,30 @@
    },
    autoHeight: true,
   //  slidesPerView: 3,
-   spaceBetween: 27,
+   spaceBetween: 10,
    breakpoints: {
+     480: {
+       spaceBetween: 15,
+       slidesPerColumn: 2,
+       slidesPerView: 2,
+       autoHeight: false,
+     },
+     576: {
+       spaceBetween: 15,
+       slidesPerColumn: 2,
+       slidesPerView: 2,
+       autoHeight: false,
+     },
      767: {
+       spaceBetween: 27,
        slidesPerView: 2
      },
      992: {
+       spaceBetween: 27,
        slidesPerView: 3
      },
      1199: {
+       spaceBetween: 27,
        slidesPerView: 4
      }
    }
