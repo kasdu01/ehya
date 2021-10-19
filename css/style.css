@@ -657,6 +657,44 @@ template {
   box-shadow: 0px 20px 24px rgba(0, 0, 0, 0.08);
 }
 
+.thank {
+  background-color: #183B56;
+}
+
+.thank-container {
+  margin-top: 77px;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.thank-title {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.thank-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #fff;
+  display: block;
+}
+
+.header-menu__button {
+  visibility: hidden;
+}
+
 .offer-container {
   display: flex;
   justify-content: space-between;
@@ -2058,6 +2096,10 @@ template {
     transform: translateX(120%);
     right: 50%;
   }
+
+  .modal__dialog {
+    padding: 33px 44px;
+  }
 }
 @media (max-width: 576px) {
   .container {
@@ -2543,5 +2585,18 @@ template {
 
   .copyright {
     display: none;
+  }
+
+  .modal__dialog {
+    padding: 20px 20px;
+    max-height: 90%;
+    overflow: auto;
+  }
+
+  .modal__button {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 7px 21px;
+    margin-bottom: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
