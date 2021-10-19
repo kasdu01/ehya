@@ -2,6 +2,8 @@
   .container
     max-width: 1100px
     width: 92%
+  .history-container
+    width: 92%
   .book-text
     max-width: 500px
   .book-image
@@ -20,6 +22,13 @@
     max-width: 420px
   .blog-article__text
     font-size: 14px
+  .textDesktop
+    display: none
+  .textMedia
+    display: block
+    font-size: 14px
+  .textMobile
+    display: block
   .blog-article__image
     margin-right: 10px
     display: block
@@ -45,6 +54,8 @@
     &:hover
       opacity: 1
   .container
+    max-width: 700px
+  .history-container
     max-width: 700px
   .book-text
     max-width: 450px
@@ -126,6 +137,10 @@
   .container
     max-width: 567px
     width: 92%
+
+  .history-container
+    max-width: 567px
+    width: 92%
   .book-container
     display: block
   .book-image
@@ -205,10 +220,42 @@
   .book-container
     margin-top: 83px
 
+  .unreleased-container
+    padding-top: 49px
+    height: 561px
+
+  // УДАЛИТЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  .categories
+    margin-bottom: 160px
+  // УДАЛИТЬ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  .unreleased-title
+    font-size: 28px
+    line-height: 36px
+    text-align: center
+    margin-bottom: 40px
+
+  .unreleased__button
+    top: auto
+    bottom: 47px
+    width: 48px
+    height: 48px
+
+  .unreleased__button--prev
+    transform: translateX(-120%)
+    left: 50%
+
+  .unreleased__button--next
+    transform: translateX(120%)
+    right: 50%
+// ==================================  576 =============================================
 @media (max-width: 576px)
   .container
     max-width: 280px
     width: 90%
+  .history-container
+    max-width: 300px
+    // width: 90%
 
   .header-menu
     align-items: initial
@@ -265,7 +312,6 @@
     text-align: center
 
   .offer-title
-
     font-size: 28px
 
   .recommendations
@@ -330,6 +376,7 @@
 
   .bestsellers-wrap
     padding-top: 30px
+    width: 280px
 
   .bestsellers-card__image
     margin-right: 14px
@@ -339,7 +386,7 @@
     padding-bottom: 6px
 
   .bestsellers-card__title
-    font-size: 16px
+    font-size: 15px
     line-height: 24px
     text-align: start
 
@@ -353,3 +400,254 @@
     width: 135px !important
     height: 180px
     margin-right: 0
+
+  .history-container
+    padding-top: 44px
+    text-align: center
+    padding-bottom: 43px
+
+  .history__title
+    font-size: 28px
+    line-height: 36px
+    width: 100%
+    margin-bottom: 25px
+
+  .history-header
+    max-width: 280px
+    margin: auto
+    flex-direction: column
+    margin-bottom: 36px
+
+  .history__text
+    width: 100%
+    font-size: 18px
+    line-height: 25px
+
+  .history-header
+    margin-bottom: 36px
+
+  // .history-video1__image
+  //   height: 123px
+  //   width: 100%
+  //   object-fit: cover
+  //   margin-bottom: 15px
+
+  .history-video2__image
+    height: 138px
+    object-fit: cover
+
+  .history-video1
+    height: 210px
+
+  .history-video
+    gap: 20px
+
+  .history-video__mini
+    gap: 18px
+
+  .history-video4
+    display: none
+
+  .history-video2__button
+    top: calc(50% - 44px)
+    background-size: 22px
+
+  .history-video__name
+    font-size: 16px
+    line-height: 20px
+
+  .history__info
+    display: flex
+    align-items: center
+    flex-direction: column
+
+  .history-video__author
+    font-size: 12px
+    line-height: 20px
+
+  .history__bookmark
+    margin-top: 15px
+    width: 9px
+
+  .partners-container
+    padding-top: 35px
+    padding-bottom: 53px
+
+  .partners__title
+    width: 270px
+    font-size: 24px
+    line-height: 30px
+    padding-bottom: 0
+  .partners-title
+    margin-bottom: 30px
+
+  .partners-wrapper
+    grid-template-columns: 1fr 1fr
+    gap: 18px 35px
+
+  .partners__logo
+    width: 90px
+
+  .partners__logo:nth-child(n+7)
+    display: none
+
+  .partners__logo:nth-child(odd)
+    justify-self: end
+
+  .partners__logo:nth-child(even)
+    justify-self: start
+
+  .blog-container
+    text-align: center
+    padding-top: 55px
+    position: relative
+    margin-bottom: 47px
+    padding-bottom: 54px
+
+  .blog__title
+    font-size: 28px
+    line-height: 36px
+  .blog-header
+    display: block
+  .blog-button__all
+    position: absolute
+    bottom: 0
+    top: auto
+
+  .blog-story
+    text-align: left
+    margin-bottom: 29px
+
+  .blog-story__image
+    height: 123px
+    width: 100%
+    object-fit: cover
+    margin-bottom: 15px
+
+  .blog-story__title
+    font-size: 16px
+    line-height: 20px
+    margin-left: 0
+    margin-bottom: 11px
+
+  .blog-story__text
+    font-size: 12px
+    line-height: 24px
+    margin-left: 0
+
+  .blog-article__image
+    width: 90px
+    height: 90px
+    margin-right: 21px
+
+  .blog__date
+    font-size: 10px
+    line-height: 20px
+
+  .blog-article__info
+    text-align: left
+
+  .blog-article__card
+    max-width: 280px
+    height: 93px
+    margin-bottom: 27px
+  .textMedia320
+    margin-top: 0px
+    margin-bottom: 0px
+    line-height: 24px
+  .blog-button__read
+    font-size: 10px
+    line-height: 20px
+
+  .blog-article__text
+    letter-spacing: 0.1px
+
+  .blog-button__all
+    position: absolute
+    bottom: 0
+    top: auto
+    left: auto
+    padding: 11px 26px
+    right: 50%
+    transform: translateX(50%)
+    width: 160px
+
+  .subsribeMobile
+    display: inline
+
+  .subsribe
+    display: none
+
+  .newsletter-container
+    border-radius: 0px
+    padding: 28px 20px 28px 22px
+
+  .newsletter-title
+    width: 200px
+    font-size: 28px
+    line-height: 36px
+    margin-bottom: 30px
+
+  .newsletter-subscribe
+    flex-direction: column
+    width: 272px
+    height: 112px
+    border-radius: 8px
+    padding-bottom: 12px
+
+  .subsribe__input
+    padding-top: 15px
+
+  .newsletter-subscribe__button
+    width: 251px
+    padding-bottom: 9px
+    padding-top: 9px
+
+  .footer-link
+    order: -1
+
+  .footer-top
+    padding-right: 0px
+    margin-bottom: 0px
+
+  .footer-container
+    padding-top: 48px
+
+  .footer-title
+    font-size: 16px
+    line-height: 22px
+
+  .list-item
+    font-size: 14px
+    line-height: 20px
+    margin-bottom: 15px
+  .footer
+    padding-left: 12px
+    padding-right: 0px
+
+  .footer-product
+    margin-bottom: 25px
+
+  .footer-info
+    text-align: center
+    margin-bottom: 64px
+
+  .footer-logo
+    margin-top: 29px
+    margin-left: -6px
+    margin-bottom: 10px
+
+  .footer__text
+    margin-bottom: 14px
+
+  .social
+    justify-content: center
+
+  .copyright
+    display: none
+
+  // .blog-story__image
+  //   height: 123px
+  //   width: 100%
+  //   object-fit: cover
+  //   margin-bottom: 15px

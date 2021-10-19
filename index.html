@@ -262,7 +262,8 @@
             <div class="bestsellers-card">
               <img src="img/card-top3.jpg" alt="" class="bestsellers-card__image" />
               <div class="bestsellers-card__text">
-                <h3 class="bestsellers-card__title">Very Nice a Novel by Mercy</h3>
+                <h3 class="bestsellers-card__title textDesktop">Very Nice a Novel by Mercy</h3>
+                <h3 class="bestsellers-card__title textMobile">Very Nice a Novel&nbsp;by Mercy</h3>
                 <span class="bestsellers-card__price">$23.00</span>
                 <div class="bestsellers-card__buttons">
                   <button data-toggle="modal" class="button bestsellers-card__button">Купить</button>
@@ -420,7 +421,7 @@
     </section>
     <!-- /.unreleased -->
     <section class="history">
-      <div class="container history-container">
+      <div class="history-container">
         <div class="history-header">
           <div class="history__title">История Автора</div>
           <div class="history__text">
@@ -431,7 +432,7 @@
         <!-- /.history-header -->
         <div class="history-video">
           <div class="history-video1">
-            <img src="img/video1.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY" />
+            <img class="history-video1__image" src="img/video1.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY" />
             <a class="button history-video1__button" data-fancybox href="https://www.youtube.com/watch?v=gZ1CNOFmjLY"></a>
           </div>
           <!-- /.history-video1 -->
@@ -460,7 +461,7 @@
               </div>
             </div>
             <!-- /.history-video3 -->
-            <div class="history-video2">
+            <div class="history-video2 history-video4">
               <img class="history-video2__image" src="img/video4.jpg" alt="https://www.youtube.com/watch?v=gZ1CNOFmjLY" />
               <a class="button history-video2__button" data-fancybox href="https://www.youtube.com/watch?v=gZ1CNOFmjLY"></a>
               <div class="history__info">
@@ -550,7 +551,8 @@
               <img class="blog-article__image" src="img/blog2.png" alt="blog image" />
               <div class="blog-article__info blog-button">
                 <span class="blog__date">23 МАРТА 2020</span>
-                <p class="blog-article__text">29 Motivational Quotes for Work Environments</p>
+                <p class="blog-article__text textDesktop">29 Motivational Quotes for&nbsp;Work Environments</p>
+                <p class="textMedia textMedia320">29 Motivational Quotes for Work Environments</p>
                 <button class="button blog-button__read">ЧИТАТЬ</button>
               </div>
             </div>
@@ -558,7 +560,7 @@
               <img class="blog-article__image" src="img/blog3.png" alt="blog image" />
               <div class="blog-article__info blog-button">
                 <span class="blog__date">28 МАРТА 2020</span>
-                <p class="blog-article__text">Learn To Love Growth and&nbsp;You Will Be A Success</p>
+                <p class="blog-article__text textMedia320">Learn To Love Growth and&nbsp;You Will Be A Success</p>
                 <button class="button blog-button__read">ЧИТАТЬ</button>
               </div>
             </div>
@@ -566,7 +568,7 @@
               <img class="blog-article__image" src="img/blog4.png" alt="blog image" />
               <div class="blog-article__info blog-button">
                 <span class="blog__date">28 МАРТА 2020</span>
-                <p class="blog-article__text">Motivation How To Build Trust at your Work</p>
+                <p class="blog-article__text textMedia320">Motivation How To Build Trust at your Work</p>
                 <button class="button blog-button__read">ЧИТАТЬ</button>
               </div>
             </div>
@@ -580,6 +582,21 @@
 
     <section class="subsribe">
       <div class="container newsletter-container">
+        <h2 class="newsletter-title">Будь первым, кто узнает о наших акциях</h2>
+        <form action="send.php" method="POST" class="newsletter-subscribe" onsubmit="send(event, 'send.php')">
+          <div class="subsribe__input">
+            <img class="subsribe__icon" src="img/email.svg" alt="" />
+            <input type="email" class="newsletter-subscribe__input" placeholder="Ваш Email" name="email" required />
+          </div>
+
+          <button class="btn newsletter-subscribe__button">Регистрация</button>
+        </form>
+      </div>
+      <!-- ./newsletter -->
+    </section>
+    <!-- /.subscribe -->
+    <section class="subsribeMobile">
+      <div class="newsletter-container">
         <h2 class="newsletter-title">Будь первым, кто узнает о наших акциях</h2>
         <form action="send.php" method="POST" class="newsletter-subscribe" onsubmit="send(event, 'send.php')">
           <div class="subsribe__input">
